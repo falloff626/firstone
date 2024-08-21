@@ -1,0 +1,1 @@
+const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x); const addOne = (x) => x + 1; const double = (x) => x * 2; const addOneThenDouble = compose(double, addOne); console.log(addOneThenDouble(3));
